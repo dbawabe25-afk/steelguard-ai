@@ -22,7 +22,14 @@ st.set_page_config(
     layout="wide"
 )
 
-MODEL_PATH = "steel_defect_model.keras"
+
+import os
+
+MODEL_PATH = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)),
+    "steel_defect_model.keras"
+)
+
 
 
 @st.cache_resource
